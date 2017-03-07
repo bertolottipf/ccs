@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+
+	<typeAliases>
+		<typeAlias type="it.bertolottipf.bcs.model.pojo.User" alias="User"/>
+		<typeAlias type="it.bertolottipf.bcs.model.pojo.Dress" alias="Dress"/>
+		<typeAlias type="it.bertolottipf.bcs.model.pojo.Message" alias="Message"/>
+	</typeAliases>
+
+
+	<environments default="developement">
+		<environment id="developement">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://localhost:3306/BabyClothesSurf" />
+				<property name="username" value="root" />
+				<property name="password" value="root" />
+			</dataSource>
+
+		</environment>
+	</environments>
+
+
+	<mappers>
+		<mapper resource="sqlMappers/UserMapper.xml"/>
+		<mapper resource="sqlMappers/DressMapper.xml"/>
+		<mapper resource="sqlMappers/MessageMapper.xml"/>
+	</mappers>
+
+
+</configuration>

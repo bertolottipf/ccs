@@ -1,0 +1,87 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="MessageMapper">
+	
+	
+	
+	<select id="selectAll" resultMap="result">
+		SELECT 
+			* 
+		FROM 
+			messages
+	</select>
+	
+	
+	
+	<insert id="insert" parameterType="Message">
+		INSERT INTO
+			messages (from_username, to_username, date, msg)
+		VALUES
+			(#{fromUsername}, #{toUsername}, #{date}, #{msg})
+		<selectKey keyProperty="id" resultType="int">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	
+	
+	
+	<select id="selectOne" resultMap="result" parameterType="int">
+		SELECT 
+			* 
+		FROM 
+			messages 
+		WHERE 
+			id = #{id}
+	</select>
+	
+	
+	
+	<select id="selectByUsername" parameterType="int" resultMap="result">
+		SELECT 
+			* 
+		FROM 
+			messages 
+		WHERE 
+			from_username = #{fromUsername} 
+				OR
+				to_username = #{toUsername}
+	</select>
+	
+	
+
+	<resultMap type="Message" id="result">
+		<id property="id" column="id"/>
+		<result property="id" column="id" /> 
+		<result property="fromUsername" column="from_username" /> 
+		<result property="toUsername" column="to_username" /> 
+		<result property="date" column="date" /> 
+		<result property="msg" column="msg" />
+	</resultMap>
+
+	
+
+	<update id="update" parameterType="Message">
+		UPDATE 
+			messages
+		SET 
+			from_username = #{fromUsername}
+			to_username = #{toUsername}
+			date = #{date}
+			msg = #{msg}
+		WHERE 
+			id = #{id}
+	</update>	
+	
+	
+	
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM 
+			messages 
+		WHERE 
+			id = #{id}
+	</delete>
+	
+</mapper>
