@@ -39,6 +39,13 @@ public class UserService {
 		userDAO.create(user);
 		return userDAO.read(user.getId());
 	}
+	
+	@Path("/{id}")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public User read(@PathParam("id") int id) {
+		return userDAO.read(id);
+	}
 
 	@Path("/{id}")
 	@DELETE

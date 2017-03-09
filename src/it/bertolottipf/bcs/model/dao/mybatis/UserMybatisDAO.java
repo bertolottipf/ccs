@@ -15,14 +15,14 @@ public class UserMybatisDAO extends AbstractMybatisDAO implements UserDAO{
 	public List<User> searchAll() {
 		SqlSession session = sessionFactory.openSession();
 		List<User> result = session.selectList("UserMapper.selectAll");
-		return null;
+		return result;
 	}
 	
 	
 	@Override
 	public boolean create(User user) {
 		SqlSession session = sessionFactory.openSession();
-		int result = session.insert("UserMapper.inser", user);
+		int result = session.insert("UserMapper.insert", user);
 		
 		return result != 0 ? true : false;
 	}

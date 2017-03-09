@@ -17,9 +17,9 @@
 	
 	<insert id="insert" parameterType="User">
 		INSERT INTO
-			users (username, password, active, active)
+			users (username, password, active, action, role, citta, provincia)
 		VALUES
-			(#{username},#{password},#{active},#{action})
+			(#{username},#{password},#{active},#{action},#{role},#{citta},#{provincia})
 		<selectKey keyProperty="id" resultType="int">
 			SELECT LAST_INSERT_ID()
 		</selectKey>
@@ -57,6 +57,9 @@
 		<result property="password" column="password"/>
 		<result property="active" column="active"/>
 		<result property="action" column="action"/>
+		<result property="role" column="role"/>
+		<result property="citta" column="citta"/>
+		<result property="provincia" column="provincia"/>
 	</resultMap>
 
 	
@@ -68,7 +71,10 @@
 		username = #{username},
 		password = #{password},
 		active = #{active},
-		action = #{action}
+		action = #{action},
+		role = #{role},
+		citta = #{citta},
+		provincia = #{provincia}
 	WHERE 
 		id = #{id}
 	</update>	

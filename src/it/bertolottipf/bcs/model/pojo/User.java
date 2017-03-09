@@ -9,7 +9,9 @@ public class User {
 	private String password;
 	private boolean active;
 	private String action;
-	private String role;
+	private int role;
+	private String citta;
+	private String provincia;
 	
 	private MessageDAO messageDAO;
 	private DressDAO dressDAO;
@@ -40,8 +42,14 @@ public class User {
 	public MessageDAO getMessageDAO() {
 		return messageDAO;
 	}
-	public String getRole() {
+	public int getRole() {
 		return role;
+	}
+	public String getCitta() {
+		return citta;
+	}
+	public String getProvincia() {
+		return provincia;
 	}
 	
 	
@@ -67,8 +75,14 @@ public class User {
 	public void setMessageDAO(MessageDAO messageDAO) {
 		this.messageDAO = messageDAO;
 	}
-	public void setRole(String role) {
+	public void setRole(int role) {
 		this.role = role;
+	}
+	public void setCitta(String citta) {
+		this.citta = citta;
+	}
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
 	}
 	
 }

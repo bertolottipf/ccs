@@ -1,0 +1,14 @@
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/dao/mybatis/MessageMybatisDAO.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/service/UserService.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/filter/CORSFilter.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/dao/mybatis/AbstractMybatisDAO.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/provider/ObjectMapperProvider.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/pojo/User.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/pojo/Message.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/dao/mybatis/DressMybatisDAO.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/service/HelloRest.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/dao/MessageDAO.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/dao/mybatis/UserMybatisDAO.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/pojo/Dress.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/dao/DressDAO.java
+/home/paolo/workspace/ChildrenClothesSurf/src/it/bertolottipf/bcs/model/dao/UserDAO.java

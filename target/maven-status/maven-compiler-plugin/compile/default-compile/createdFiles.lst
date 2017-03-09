@@ -1,0 +1,14 @@
+it/bertolottipf/bcs/filter/CORSFilter.class
+it/bertolottipf/bcs/provider/ObjectMapperProvider.class
+it/bertolottipf/bcs/service/HelloRest.class
+it/bertolottipf/bcs/model/dao/UserDAO.class
+it/bertolottipf/bcs/model/dao/mybatis/DressMybatisDAO.class
+it/bertolottipf/bcs/model/dao/mybatis/UserMybatisDAO.class
+it/bertolottipf/bcs/model/dao/mybatis/AbstractMybatisDAO.class
+it/bertolottipf/bcs/model/pojo/Dress.class
+it/bertolottipf/bcs/service/UserService.class
+it/bertolottipf/bcs/model/pojo/User.class
+it/bertolottipf/bcs/model/dao/MessageDAO.class
+it/bertolottipf/bcs/model/dao/mybatis/MessageMybatisDAO.class
+it/bertolottipf/bcs/model/dao/DressDAO.class
+it/bertolottipf/bcs/model/pojo/Message.class

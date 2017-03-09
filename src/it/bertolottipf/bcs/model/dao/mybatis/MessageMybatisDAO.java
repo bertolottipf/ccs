@@ -11,7 +11,7 @@ public class MessageMybatisDAO extends AbstractMybatisDAO implements MessageDAO 
 	
 	
 	@Override
-	public List<Message> selectAll() {
+	public List<Message> searchAll() {
 		SqlSession session = sessionFactory.openSession();
 		List<Message> messages = session.selectList("MessageMapper.selectAll");
 		
