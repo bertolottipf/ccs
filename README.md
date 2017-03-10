@@ -5,9 +5,9 @@ Questo presuppone che l'utilizzo sia non troppo gravoso per un DB di poccole dim
 
 I principali compiti previsti per questo sito i seguenti:
 * gestione utenti
-	- amministratori
+	* amministratori
 		+ dovranno poter vedere tutti i post degli utenti ed approvarli ad uno ad uno
-	- utenti
+	* utenti
 		+ dovranno essere geolocalizzati
 		+ potranno inserire i propri capi
 		+ cercare capi
