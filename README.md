@@ -16,7 +16,7 @@ I principali compiti previsti per questo sito i seguenti:
 
 -------------
 
-Date queste premesse il DB conterrÃ  le seguenti tabelle
+Date queste premesse il DB conterrà  le seguenti tabelle
 
 
 __USERS__
