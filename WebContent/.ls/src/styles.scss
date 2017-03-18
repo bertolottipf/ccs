@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Aladin|Poppins:300,400,500,600,700');
+//font-family: 'Aladin', cursive;
+//font-family: 'Poppins', sans-serif;
+
+
+$font-title: 'Aladin', cursive;
+$font-doc: 'Poppins', sans-serif;
+
+body {
+	font-family: $font-doc;
+}
+
+.logo {
+	margin-right: 10px;
+}
+
+.content {
+	margin-top: 2em;
+}
+
+.title {
+	font-family: $font-title;
+}
+
+h1 {
+	@extend .title;
+}
+
+h2 {
+	@extend .title;
+}
