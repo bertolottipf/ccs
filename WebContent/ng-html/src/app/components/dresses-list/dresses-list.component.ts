@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
 import { DressService } from '../../services/dress.service';
 import { Dress } from '../../classes/dress';
-import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,24 +12,23 @@ import { Observable } from 'rxjs';
 	providers: [DressService]
 })
 export class DressesListComponent implements OnInit {
+	errorMessage: string;
+	dresses: Dress[];
+	mode = 'Observable';
 
-	dress: Dress[];
-	json: string;
-
-	data: Observable<Array<any>>;
-
-	constructor(private _dressService: DressService) {
-	}
-
-	getAll() {
-		this._dressService.getAll().subscribe(res => {
-			console.log(JSON.stringify(res)); // loggo il json!!!!
-			this.data = res;
-		})
+	constructor(private dressService: DressService) {
 	}
 
 	ngOnInit() {
 		this.getAll();
+	}
+
+	getAll() {
+		this.dressService.getAll()
+				.subscribe(
+					dresses => this.dresses = dresses,
+					error => this.errorMessage = <any>error
+				);
 	}
 
 }

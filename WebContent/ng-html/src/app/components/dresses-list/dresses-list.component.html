@@ -1,15 +1,57 @@
 <h2>Dresses</h2>
-<!-- <ul class="dresses">
-	<li *ngFor="let dress of dresses" (click)="onSelect(dress)" >
-		<span><a routerLink="#">{{dress}}</a></span>
-	</li>
-</ul> -->
 
-<p>
-	{{json}} <!-- va? -->
-</p>
 
-<table border=1>
+<table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="10">
+	<thead>
+		<tr>
+			<th>
+				<mfDefaultSorter by="object">Object</mfDefaultSorter>
+			</th>
+			<th>
+				<mfDefaultSorter by="size">Size</mfDefaultSorter>
+			</th>
+			<th>
+				<mfDefaultSorter by="age">Age</mfDefaultSorter>
+			</th>
+			<th>
+				<mfDefaultSorter by="colour">Colour</mfDefaultSorter>
+			</th>
+			<th>
+				<mfDefaultSorter by="matherial">Matherial</mfDefaultSorter>
+			</th>
+			<th>
+				
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr *ngFor="let dress of dresses">
+			<td>{{dress.object}}</td>
+			<td>{{dress.size}}</td>
+			<td>{{dress.age}}</td>
+			<td>{{dress.colour}}</td>
+			<td>{{dress.matherial}}</td>
+			<td>
+				<a href="dress_detail?id={{dress.id}}">
+					<img src="assets/img/Info.png" alt="Info" title="Info">
+				</a>
+			</td>
+		</tr>
+	</tbody>
+
+	<tfoot>
+		<tr>
+			<td colspan="6">
+				<mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+			</td>
+		</tr>
+	</tfoot>
+</table>
+
+
+
+<!-- <table border=1>
 	<tr>
 		<td>object</td>
 		<td>size</td>
@@ -19,13 +61,13 @@
 		<td>matherial</td>
 		<td>description</td>
 	</tr>
-	<tr *ngFor="let item of data">
-		<td>{{item.object}}</td>
-		<td>{{item.size}}</td>
-		<td>{{item.age}}</td>
-		<td>{{item.files}}</td>
-		<td>{{item.colour}}</td>
-		<td>{{item.matherial}}</td>
-		<td>{{item.description}}</td>
+	<tr *ngFor="let dress of dresses">
+		<td>{{dress.object}}</td>
+		<td>{{dress.size}}</td>
+		<td>{{dress.age}}</td>
+		<td>{{dress.files}}</td>
+		<td>{{dress.colour}}</td>
+		<td>{{dress.matherial}}</td>
+		<td>{{dress.description}}</td>
 	</tr>
-</table>
+</table> -->

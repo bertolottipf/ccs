@@ -9,7 +9,7 @@ import { DressDetailsComponent } from './components/dress-details/dress-details.
 export const router: Routes = [
 	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
-	{ path: 'dress_deails', component: DressDetailsComponent },
+	{ path: 'dress_detail', component: DressDetailsComponent },
 	{ path: 'dress_list', component: DressesListComponent },
 ];
 

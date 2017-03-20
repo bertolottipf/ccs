@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
+import {DataTableModule} from "angular2-datatable";
 
 import { routes } from './app.router';
 
@@ -29,6 +30,8 @@ import { DressService } from './services/dress.service';
 		BrowserModule,
 		FormsModule,
 		HttpModule,
+		JsonpModule,
+		DataTableModule,
 		routes
 	],
 	bootstrap: [AppComponent]
